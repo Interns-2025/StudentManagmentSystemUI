@@ -1,9 +1,7 @@
-// src/components/auth/Signup.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../src/styles/comman.css";
 import { registerUser } from "../api/authApi";
-
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -39,7 +37,7 @@ const Signup = () => {
       const { adminUsername, adminPassword, ...payload } = form; // remove unnecessary frontend-only fields
       await registerUser(payload);
       alert("Signup successful! Please login.");
-      navigate("/");
+      navigate("/"); // Navigate after successful signup
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed. Try again.");
     }
