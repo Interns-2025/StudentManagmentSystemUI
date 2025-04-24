@@ -12,7 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
-    e.preventDefault(); /* stops from to reload the page */
+    e.preventDefault(); /* stops from to reload the page on the ui */
    
 
     try {
