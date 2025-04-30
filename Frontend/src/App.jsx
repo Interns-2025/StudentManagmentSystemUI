@@ -19,6 +19,17 @@ import ManageSystem from "./components/admin/ManageSystem";
 import TeacherDash from "./components/teacher/TeacherDash";
 import StudentDash from "./components/student/StudentDash";
 import ParentDash from "./components/parent/ParentDash";
+import ViewStudent from "./components/admin/ViewStudent";
+import DeleteStudent from "./components/admin/DeleteStudent";
+import UpdateStudent from "./components/admin/UpdateStudent";
+import SearchStudent from "./components/admin/SearchStudent";
+import Logout from "./components/admin/Logout";
+import AddStudent from "./components/admin/AddStudent";
+import ViewTeacher from "./components/admin/ViewTeacher";
+import AddTeacher from "./components/admin/AddTeacher";
+import SearchTeacher from "./components/admin/SearchTeacher";
+import UpdateTeacher from "./components/admin/UpdateTeacher";
+import DeleteTeacher from "./components/admin/DeleteTeacher";
 
 function App() {
   return (
@@ -34,6 +45,18 @@ function App() {
         <Route path="/admin" element={<AdminDash />} />
         <Route path="/admin/system" element={<ManageSystem/>}/>
         <Route path="/admin/roles" element={<ManageUserRoles />} />
+        <Route path="/admin/add-student" element={<AddStudent />} />
+        <Route path="/admin/view-student" element={<ViewStudent />} />
+        <Route path="/admin/delete-student" element={<DeleteStudent />} />
+        <Route path="/admin/update-student" element={<UpdateStudent />} />
+        <Route path="/admin/search-student" element={<SearchStudent />} />
+        <Route path="/admin/view-teacher" element={<ViewTeacher />} />
+        <Route path="/admin/add-teacher" element={<AddTeacher />} />
+        <Route path="/admin/search-teacher" element={<SearchTeacher />} />
+        <Route path="/admin/update-teacher" element={<UpdateTeacher />} />
+        <Route path="/admin/delete-teacher" element={<DeleteTeacher />} />
+       
+        <Route path="/admin/logout" element={<Logout />} />
 
         {/* teacher roting */}
         <Route path="/teacher" element={<TeacherDash/>}/>
